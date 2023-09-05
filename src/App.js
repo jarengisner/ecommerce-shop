@@ -1,11 +1,8 @@
 import './App.css';
+import MainView from './components/main-view/main-view.component';
 
 function App() {
-  return (
-    <div className='App'>
-      <h1>testing</h1>
-    </div>
-  );
+  return <MainView />;
 }
 
 export default App;
