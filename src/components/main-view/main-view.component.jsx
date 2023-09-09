@@ -1,10 +1,15 @@
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Modal, ModalTitle } from 'react-bootstrap';
 import NavBar from '../nav-component/nav.component';
 import { useEffect, useState } from 'react';
 import ShopItem from '../shop-item-card/shop-item.component';
 
 const MainView = () => {
   const [products, setProducts] = useState([]);
+  const [show, setShow] = useState(false);
+
+  const showModal = () => {
+    setShow(true);
+  };
 
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
@@ -19,7 +24,7 @@ const MainView = () => {
   return (
     <>
       <>
-        <NavBar />
+        <NavBar showModal={showModal} />
       </>
       <Container>
         <Row>
