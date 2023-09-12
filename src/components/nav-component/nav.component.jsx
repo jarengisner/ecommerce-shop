@@ -11,19 +11,15 @@ const NavBar = ({ showModal }) => {
   return (
     <Navbar expand='lg' className='bg-body-tertiary' bg='dark'>
       <Container>
-        <Navbar.Brand href='#home' style={{ color: 'white' }}>
-          React-Bootstrap
+        <Navbar.Brand
+          href='#home'
+          style={{ color: 'white' }}
+          className='page-title'
+        >
+          JShop
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
-          <Nav className='me-auto'>
-            <Nav.Link href='#home' style={{ color: 'white' }}>
-              Home
-            </Nav.Link>
-            <Nav.Link href='#link' style={{ color: 'white' }}>
-              Link
-            </Nav.Link>
-          </Nav>
           <Nav className='ml-auto'>
             <Nav.Link href='###' className='justify-content-end'>
               <FontAwesomeIcon
